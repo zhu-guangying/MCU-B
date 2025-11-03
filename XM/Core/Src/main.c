@@ -197,7 +197,7 @@ int main(void)
 			HAL_UART_Transmit(&huart2, (uint8_t*)s, strlen(s), 1000);
 			
 			
-						// 上传烟雾传感器数据(ADC)
+			// 上传烟雾传感器数据(ADC)
 			smoke = Smoke_Sensor_Get();
 			sprintf(s, "%s/sensor/smoke %u\n", DEVICE_ID, smoke);
 			HAL_UART_Transmit(&huart2, (uint8_t*)s, strlen(s), 10);
